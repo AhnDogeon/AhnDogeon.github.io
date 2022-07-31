@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - DG&#39;s Blog</title>
-        <link>https://ahndogeon.github.io/posts/</link>
-        <description>All Posts | DG&#39;s Blog</description>
+        <title>HTML - Tag - DG&#39;s Blog</title>
+        <link>https://ahndogeon.github.io/tags/html/</link>
+        <description>HTML - Tag - DG&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ahn_qlti@naver.com (Dogeon Ahn)</managingEditor>
-            <webMaster>ahn_qlti@naver.com (Dogeon Ahn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 28 Jul 2022 23:00:00 &#43;0900</lastBuildDate><atom:link href="https://ahndogeon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ahn_qlti@naver.com (Dogeon Ahn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 28 Jul 2022 23:00:00 &#43;0900</lastBuildDate><atom:link href="https://ahndogeon.github.io/tags/html/" rel="self" type="application/rss+xml" /><item>
     <title>Initial Post</title>
     <link>https://ahndogeon.github.io/initial_post/</link>
     <pubDate>Thu, 28 Jul 2022 23:00:00 &#43;0900</pubDate>
