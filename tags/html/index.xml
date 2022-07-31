@@ -11,7 +11,7 @@
     <author>AhnDogeon</author>
     <guid>https://ahndogeon.github.io/initial_post/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/featured-image.jpeg" referrerpolicy="no-referrer">
+                <img src="/images/first_post.png" referrerpolicy="no-referrer">
             </div><blockquote>
 <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>
 </blockquote>]]></description>
