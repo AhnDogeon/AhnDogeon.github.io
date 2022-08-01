@@ -11,7 +11,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ahndogeon.github.io/make_blog/" /><meta property="og:image" content="https://ahndogeon.github.io/images/profile3.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-31T13:57:34+09:00" />
-<meta property="article:modified_time" content="2022-07-31T14:01:24+09:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-08-01T22:10:19+09:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ahndogeon.github.io/images/profile3.png"/>
@@ -35,8 +35,8 @@
                             "url": "https:\/\/ahndogeon.github.io\/images\/profile.png",
                             "width":  460 ,
                             "height":  460 
-                        }],"genre": "posts","keywords": "Web, HUGO","wordcount":  113 ,
-        "url": "https:\/\/ahndogeon.github.io\/make_blog\/","datePublished": "2022-07-31T13:57:34+09:00","dateModified": "2022-07-31T14:01:24+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "Web, HUGO","wordcount":  225 ,
+        "url": "https:\/\/ahndogeon.github.io\/make_blog\/","datePublished": "2022-07-31T13:57:34+09:00","dateModified": "2022-08-01T22:10:19+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Kid","logo": "https:\/\/ahndogeon.github.io\/images\/profile3.png"},"author": {
                 "@type": "Person",
@@ -109,8 +109,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">블로그를 만들어보자</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-31">2022-07-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;113 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-31">2022-07-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;225 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -129,6 +129,8 @@
       <ul>
         <li><a href="#hugo-설치">Hugo 설치</a></li>
         <li><a href="#heading"></a></li>
+        <li><a href="#github-리포-생성">Github 리포 생성</a></li>
+        <li><a href="#hugo-프로젝트-생성">Hugo 프로젝트 생성</a></li>
       </ul>
     </li>
   </ul>
@@ -167,17 +169,60 @@
 </div>
 </div><h3 id="heading"></h3>
 <ul>
-<li>Github 리포 생성</li>
+<li>
+<h3 id="github-리포-생성">Github 리포 생성</h3>
+</li>
 </ul>
-<p>Github.io 리포에 바로 만들어도 되겠지만, 템플릿과 <code>Hugo</code>를 이용해 만들려면 아래 두 개 리포를 만들어둔다.(<code>blog</code>의 이름은 자유)</p>
-<p><code>blog</code></p>
-<p><code>&lt;github name&gt;.github.io</code></p>
-</div><div class="post-footer" id="post-footer">
+<p>​		Github.io 리포에 바로 만들어도 되겠지만, 템플릿과 <code>Hugo</code>를 이용해 만들려면 아래 두 개 리포를 만들어둔다.(<code>blog</code>의 이름은 자유)</p>
+<p>​		<code>blog</code></p>
+<p>​		<code>&lt;github name&gt;.github.io</code></p>
+<ul>
+<li>
+<h3 id="hugo-프로젝트-생성">Hugo 프로젝트 생성</h3>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># hugo 프로젝트 생성</span>
+</span></span><span class="line"><span class="cl">$ hugo new site blog
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성 완료되면 출력 문구</span>
+</span></span><span class="line"><span class="cl">Congratulations! Your new Hugo site is created in /Users/user/Workspaces/blog.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Just a few more steps and you<span class="err">&#39;</span>re ready to go:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. Download a theme into the same-named folder.
+</span></span><span class="line"><span class="cl">   Choose a theme from https://themes.gohugo.io/ or
+</span></span><span class="line"><span class="cl">   create your own with the <span class="s2">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span> command.
+</span></span><span class="line"><span class="cl">2. Perhaps you want to add some content. You can add single files
+</span></span><span class="line"><span class="cl">   with <span class="s2">&#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
+</span></span><span class="line"><span class="cl">3. Start the built-in live server via <span class="s2">&#34;hugo server&#34;</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Visit https://gohugo.io/ <span class="k">for</span> quickstart guide and full documentation.
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-07-31&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/83d191014fc83851e0824f7605407e1557de5ff5" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) 83d191014fc83851e0824f7605407e1557de5ff5: rebuilding site 2022년 7월 31일 일요일 14시 01분 24초 KST">
-                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>83d1910</a></span>
+                <span>Updated on 2022-08-01&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/bddff100403601ddc9e91770924f829da77bf0f5" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) bddff100403601ddc9e91770924f829da77bf0f5: rebuilding site 2022년 8월  1일 월요일 22시 10분 19초 KST">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>bddff10</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>

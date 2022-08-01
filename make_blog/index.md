@@ -12,9 +12,11 @@
 
 
 
+
+
 ## 1. 환경설정
 
-- ### 	Hugo 설치
+- ### Hugo 설치
 
 ```shell
 # hugo install
@@ -25,11 +27,33 @@ $ hugo versio
 
 ### 
 
-- Github 리포 생성
+- ### Github 리포 생성
 
-Github.io 리포에 바로 만들어도 되겠지만, 템플릿과 `Hugo`를 이용해 만들려면 아래 두 개 리포를 만들어둔다.(`blog`의 이름은 자유)
+​		Github.io 리포에 바로 만들어도 되겠지만, 템플릿과 `Hugo`를 이용해 만들려면 아래 두 개 리포를 만들어둔다.(`blog`의 이름은 자유)
 
-`blog`
+​		`blog`
 
-`<github name>.github.io`
+​		`<github name>.github.io`
+
+
+
+* ### Hugo 프로젝트 생성
+
+```shell
+# hugo 프로젝트 생성
+$ hugo new site blog
+# 생성 완료되면 출력 문구
+Congratulations! Your new Hugo site is created in /Users/user/Workspaces/blog.
+
+Just a few more steps and you're ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the "hugo new theme <THEMENAME>" command.
+2. Perhaps you want to add some content. You can add single files
+   with "hugo new <SECTIONNAME>/<FILENAME>.<FORMAT>".
+3. Start the built-in live server via "hugo server".
+
+Visit https://gohugo.io/ for quickstart guide and full documentation.
+```
 
