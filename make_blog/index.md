@@ -22,7 +22,7 @@
 # hugo install
 $ brew install hugo
 # check
-$ hugo versio
+$ hugo version
 ```
 
 ### 
