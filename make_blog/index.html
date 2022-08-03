@@ -33,7 +33,7 @@
                             "url": "https:\/\/ahndogeon.github.io\/images\/profile.png",
                             "width":  460 ,
                             "height":  460 
-                        }],"genre": "posts","keywords": "Web, HUGO","wordcount":  225 ,
+                        }],"genre": "posts","keywords": "Web, HUGO","wordcount":  825 ,
         "url": "https:\/\/ahndogeon.github.io\/make_blog\/","datePublished": "2022-07-31T13:57:34+09:00","dateModified": "2022-08-01T22:17:26+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Kid","logo": "https:\/\/ahndogeon.github.io\/images\/profile3.png"},"author": {
@@ -107,8 +107,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">블로그를 만들어보자</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-31">2022-07-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;225 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-31">2022-07-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;825 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -129,8 +129,11 @@
         <li><a href="#heading"></a></li>
         <li><a href="#github-리포-생성">Github 리포 생성</a></li>
         <li><a href="#hugo-프로젝트-생성">Hugo 프로젝트 생성</a></li>
+        <li><a href="#테마-설치">테마 설치</a></li>
       </ul>
     </li>
+    <li><a href="#2-git-리포-연결-및-간편-배포-스크립트-작성">2. Git 리포 연결 및 간편 배포 스크립트 작성</a></li>
+    <li><a href="#3-정리하며">3. 정리하며.</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="hugo를-이용해-블로그를-만들어보자">Hugo를 이용해 블로그를 만들어보자</h1>
@@ -162,7 +165,7 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># hugo install</span>
 </span></span><span class="line"><span class="cl">$ brew install hugo
 </span></span><span class="line"><span class="cl"><span class="c1"># check</span>
-</span></span><span class="line"><span class="cl">$ hugo versio
+</span></span><span class="line"><span class="cl">$ hugo version
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="heading"></h3>
@@ -215,7 +218,240 @@
 </span></span><span class="line"><span class="cl">Visit https://gohugo.io/ <span class="k">for</span> quickstart guide and full documentation.
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><ul>
+<li>
+<h3 id="테마-설치">테마 설치</h3>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ git init
+</span></span><span class="line"><span class="cl"><span class="c1"># 브랜치를 main으로 변경</span>
+</span></span><span class="line"><span class="cl">$ git branch -M main
+</span></span><span class="line"><span class="cl"><span class="c1"># git remote add origin &lt;YOUR ROOT REPOSITORY&gt;</span>
+</span></span><span class="line"><span class="cl">$ git remote add origin https://github.com/ahndogeon/blog.git
+</span></span><span class="line"><span class="cl"><span class="c1"># git submodule add https://github.com/&lt;theme 경로&gt;.git themes/&lt;theme 이름&gt;</span>
+</span></span><span class="line"><span class="cl">$ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</span></span><span class="line"><span class="cl">$ cp themes/hugo-tranquilpeak-theme/exampleSite/config.toml config.toml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>copy한 config.toml을 내 블로그에 맞게 수정해준다. BaseURL을 수정하고, 각 텍스트를 내 블로그에 맞게 수정해줬다.</p>
+<p>이러면 대략적인 베이스 준비는 끝났다. 터미널에서 서버를 실행시켜주고 로컬에서 확인해보자.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo server 
+</span></span><span class="line"><span class="cl">Start building sites …
+</span></span><span class="line"><span class="cl">hugo v0.89.4+extended darwin/amd64 BuildDate=unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                   | EN-US
+</span></span><span class="line"><span class="cl">-------------------+--------
+</span></span><span class="line"><span class="cl">  Pages            |     9
+</span></span><span class="line"><span class="cl">  Paginator pages  |     0
+</span></span><span class="line"><span class="cl">  Non-page files   |     0
+</span></span><span class="line"><span class="cl">  Static files     |     4
+</span></span><span class="line"><span class="cl">  Processed images |     0
+</span></span><span class="line"><span class="cl">  Aliases          |     1
+</span></span><span class="line"><span class="cl">  Sitemaps         |     1
+</span></span><span class="line"><span class="cl">  Cleaned          |     0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Built in 9 ms
+</span></span><span class="line"><span class="cl">Watching for changes in /Users/user/workspace/blog/{archetypes,content,data,layouts,static,themes}
+</span></span><span class="line"><span class="cl">Watching for config changes in /Users/user/workspace/blog/config.toml
+</span></span><span class="line"><span class="cl">Environment: &#34;development&#34;
+</span></span><span class="line"><span class="cl">Serving pages from memory
+</span></span><span class="line"><span class="cl">Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+</span></span><span class="line"><span class="cl">Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+</span></span><span class="line"><span class="cl">Press Ctrl+C to stop
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-git-리포-연결-및-간편-배포-스크립트-작성">2. Git 리포 연결 및 간편 배포 스크립트 작성</h2>
+<p><code>blog</code>에 <code>Github blog</code>, <code>blog/public</code>에 <code>Github &lt;username&gt;.github.io</code>를 연결한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># blog -&gt; blog 레포지토리 연결</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># git remote add origin http://github.com/&lt;username&gt;/blog.git</span>
+</span></span><span class="line"><span class="cl">$ git remote add origin https://github.com/ahndogeon/blog.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># blog/public -&gt; &lt;username&gt;.github.io 연결</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># git submodule add -b main http://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git public</span>
+</span></span><span class="line"><span class="cl">$ git submodule add -b main http://github.com/ahndogeon/ahndogeon.github.io.git public
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>배포는 역시 <code>deploy.sh</code> 로 간편하게 하는 것이 최고다.
+<strong>blog/deploy.sh</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># If a command fails then the deploy stops</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -e
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32mBuild the project.\033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl">hugo -D
+</span></span><span class="line"><span class="cl"><span class="c1"># hugo -t timeline # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32m  Go To Public folder \033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32m  Setting for submodule commit \033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl">git config --local user.name <span class="s2">&#34;#######&#34;</span>
+</span></span><span class="line"><span class="cl">git config --local user.email <span class="s2">&#34;######&#34;</span>
+</span></span><span class="line"><span class="cl">git submodule update --init --recursive
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32m  Add changes to git. \033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32m  Commit changes.. \033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32m  Push blog(presentation) source and build repos. \033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32m  Come Back up to the Project Root \033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$pwd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\033[0;32m  root repository Commit &amp; Push. \033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>터미널에서 chmod 파일 권한을 주고 실행하면?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># deploy.sh 실행 파일 권한 부여
+</span></span><span class="line"><span class="cl">$ chmod 777 deploy.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 배포 실행
+</span></span><span class="line"><span class="cl">$ ./deploy.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>커피 한 잔 하고 오면 <code>https://ahndogeon.github.io</code> 에서 나만의 블로그를 볼 수 있다.</p>
+<p>앞으로도 포스팅 후에는 <code>./deploy.sh</code> 명령어 하나로 배포할 수 있다.</p>
+<p>블로그가 어느 정도 활성화되면 <code>google adsense</code> 를 추가해야겠다.</p>
+<h2 id="3-정리하며">3. 정리하며.</h2>
+<p>간단한 블로그 배포에도 결국 트러블 슈팅에 시간을 꽤 잡아먹었다. 우선 빠르게 두 가지 <code>개발 블로그 배포</code>, <code>입사 후 지금까지 플젝 정리</code> 가 필요하여, 동기의 추천 테마를 사용해 빠르게 배포하였다. 조금의 시간과 의지가 허락한다면, 테마가 아닌 AtoZ로 개발하고 싶긴하다.(언제가 될지..) 사실 지금까지 개발자로 지내며, 공유하고 싶은 내용이 산더미다. 그것부터 진행하고 싶다. 부서 특성 상 좋은 기회로 여러 프로젝트를 할 수 있었다. 게임 개발, 람다 활용한 API 서버 개발, 개인적으로 진행한 사이드 프로젝트도 한 번 정리하는 시간을 가져야겠다.</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
