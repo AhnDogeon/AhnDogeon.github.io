@@ -4,18 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Make_api - DG&#39;s Blog</title><meta name="Description" content="About Kid"><meta property="og:title" content="Make_api" />
-<meta property="og:description" content="" />
+        <title>Make_api - DG&#39;s Blog</title><meta name="Description" content="This article explain how to make api server with FastAPI"><meta property="og:title" content="Make_api" />
+<meta property="og:description" content="This article explain how to make api server with FastAPI" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ahndogeon.github.io/make_api/" /><meta property="og:image" content="https://ahndogeon.github.io/images/profile3.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-04T19:15:43+09:00" />
-<meta property="article:modified_time" content="2022-08-04T19:15:43+09:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-08-04T19:15:52+09:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ahndogeon.github.io/images/profile3.png"/>
 
 <meta name="twitter:title" content="Make_api"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="This article explain how to make api server with FastAPI"/>
 <meta name="application-name" content="kid">
 <meta name="apple-mobile-web-app-title" content="kid"><meta name="theme-color" content="#DB6B97"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ahndogeon.github.io/make_api/" /><link rel="prev" href="https://ahndogeon.github.io/make_blog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -33,13 +33,13 @@
                             "url": "https:\/\/ahndogeon.github.io\/images\/profile.png",
                             "width":  460 ,
                             "height":  460 
-                        }],"genre": "posts","wordcount":  0 ,
-        "url": "https:\/\/ahndogeon.github.io\/make_api\/","datePublished": "2022-08-04T19:15:43+09:00","dateModified": "2022-08-04T19:15:43+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "API, Server","wordcount":  249 ,
+        "url": "https:\/\/ahndogeon.github.io\/make_api\/","datePublished": "2022-08-04T19:15:43+09:00","dateModified": "2022-08-04T19:15:52+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Kid","logo": "https:\/\/ahndogeon.github.io\/images\/profile3.png"},"author": {
                 "@type": "Person",
-                "name": "Dogeon Ahn"
-            },"description": ""
+                "name": "AhnDogeon"
+            },"description": "This article explain how to make api server with FastAPI"
     }
     </script></head>
     <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -106,20 +106,129 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Make_api</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Dogeon Ahn</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-04">2022-08-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;0 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;0 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-04">2022-08-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;249 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/fast_api_image.png"
+        data-srcset="/images/fast_api_image.png, /images/fast_api_image.png 1.5x, /images/fast_api_image.png 2x"
+        data-sizes="auto"
+        alt="/images/fast_api_image.png"
+        title="This article explain how to make api server with FastAPI" width="1023" height="369" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"></div><div class="post-footer" id="post-footer">
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#서버-스펙-명세">서버 스펙 명세</a></li>
+    <li><a href="#1-환경설정">1. 환경설정</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#fastapi-설치">FastAPI 설치</a></li>
+            <li><a href="#mainpy-작성">main.py 작성</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-api-코드-작성">2. API 코드 작성</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>FastAPI로 api 서버를 개발하고, 배포해보자</p>
+</blockquote>
+<p>title: &ldquo;Initial Post&rdquo;
+date: 2022-07-28T23:00:00+09:00
+lastmod: 2022-07-31T12:13:40+09:00
+author: &ldquo;AhnDogeon&rdquo;
+authorLink: &ldquo;<a href="https://github.com/ahndogeon%22" target="_blank" rel="noopener noreffer ">https://github.com/ahndogeon"</a>
+description: &ldquo;This article shows the basic Markdown syntax and format.&rdquo;
+draft: false
+tags: [&ldquo;Markdown&rdquo;, &ldquo;HTML&rdquo;]
+categories: [&ldquo;Markdown&rdquo;]
+lightgallery: true
+featuredImage: &ldquo;/images/first_post.png&rdquo;</p>
+<p>2021년 상반기에 만들었던 로블록스 게임과 연계해서 이벤트를 해보자는 협업 요청이 들어왔다. 외부앱에서 들어오는 요청에 대한 응답을 해주는 서버 개발이 필요했고, 오픈 일정이 매우 촉박했기에 <code>FastAPI</code>로 빠르게 개발하는 것이 좋다는 판단을 했다.</p>
+<p>이번 장에서는 <code>FastAPI</code> 개발 내용을 정리하고, DB연동과 서버 배포에 대한 내용을 차례로 정리할 계획이다.</p>
+<p>당연하게도 사내 프로젝트인만큼 블로그에서는 상세한 구축법, 코드, 아키텍처를 제외한, 트러블슈팅 내용, 개발 고민, 과정, 간단 코드 위주로 포스팅을 하겠다.</p>
+<h2 id="서버-스펙-명세">서버 스펙 명세</h2>
+<ul>
+<li>버전관리시스템 : Git - GitLab</li>
+<li>API 설계 원칙 : REST API</li>
+<li>직렬화 포맷 : JSON</li>
+<li>사용자 인증 : Authorization 헤더</li>
+<li>인증 스키마 : Bearer + token (Lambda Authorizer 사용)</li>
+<li>언어 + 웹 프레임워크 : Python + FastAPI</li>
+<li>컴퓨팅 서비스 : AWS Lambda (ap-northeast-2, seoul)</li>
+<li>배포 라이브러리 : Mangum (zappa는 FastAPI 지원안함)</li>
+<li>게이트웨이 : AWS API Gateway</li>
+<li>데이터베이스 : <del>AWS RDS PostgreSQL(엔진) + sqlalchemy(orm)</del> &raquo;&gt; mysql + sqlalchemy(orm)
+<ul>
+<li><strong>개발 초기 내부망이 아닌 외부망에서 진행 계획이었던 프로젝트라, postgre를 사용하였는데, 개발 도중 내부망으로 들여와야 했다.</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="1-환경설정">1. 환경설정</h2>
+<ul>
+<li>
+<h4 id="fastapi-설치">FastAPI 설치</h4>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ pip install fastapi
+</span></span><span class="line"><span class="cl"> $ pip install uvicorn
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<h4 id="mainpy-작성">main.py 작성</h4>
+<ul>
+<li><code>mangum</code> 이나, <code>uvicorn</code>   등 기타 필요한 사항들을 상단에 import 시켜줘야 한다.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">title</span><span class="o">=</span><span class="s2">&#34;&lt;server name&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;&lt;server description&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">default_response_class</span><span class="o">=</span><span class="n">JSONResponse</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 라우터 정의</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 라우터 디렉토리를 두 개로 나누어줬다.</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">include_router</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">router</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&#34;/v1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">include_router</span><span class="p">(</span><span class="n">evntcode</span><span class="o">.</span><span class="n">router</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&#34;/v1&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-api-코드-작성">2. API 코드 작성</h2>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-08-04</span>
+                <span>Updated on 2022-08-04&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/11dcae425b67ec42a96924dc07355efd684656c8" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) 11dcae425b67ec42a96924dc07355efd684656c8: rebuilding site 2022년 8월  4일 목요일 19시 15분 52초 KST">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>11dcae4</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
@@ -132,7 +241,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/api/">API</a>,&nbsp;<a href="/tags/server/">Server</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>

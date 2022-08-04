@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - DG&#39;s Blog</title>
-        <link>https://ahndogeon.github.io/posts/</link>
-        <description>All Posts | DG&#39;s Blog</description>
+        <title>Server - Tag - DG&#39;s Blog</title>
+        <link>https://ahndogeon.github.io/tags/server/</link>
+        <description>Server - Tag - DG&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ahn_qlti@naver.com (Dogeon Ahn)</managingEditor>
-            <webMaster>ahn_qlti@naver.com (Dogeon Ahn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Aug 2022 19:15:43 &#43;0900</lastBuildDate><atom:link href="https://ahndogeon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ahn_qlti@naver.com (Dogeon Ahn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Aug 2022 19:15:43 &#43;0900</lastBuildDate><atom:link href="https://ahndogeon.github.io/tags/server/" rel="self" type="application/rss+xml" /><item>
     <title>Make_api</title>
     <link>https://ahndogeon.github.io/make_api/</link>
     <pubDate>Thu, 04 Aug 2022 19:15:43 &#43;0900</pubDate>
@@ -18,30 +18,6 @@ title: &ldquo;Initial Post&rdquo; date: 2022-07-28T23:00:00+09:00 lastmod: 2022-
 이번 장에서는 FastAPI 개발 내용을 정리하고, DB연동과 서버 배포에 대한 내용을 차례로 정리할 계획이다.
 당연하게도 사내 프로젝트인만큼 블로그에서는 상세한 구축법, 코드, 아키텍처를 제외한, 트러블슈팅 내용, 개발 고민, 과정, 간단 코드 위주로 포스팅을 하겠다.
 서버 스펙 명세 버전관리시스템 : Git - GitLab API 설계 원칙 : REST API 직렬화 포맷 : JSON 사용자 인증 : Authorization 헤더 인증 스키마 : Bearer + token (Lambda Authorizer 사용) 언어 + 웹 프레임워크 : Python + FastAPI 컴퓨팅 서비스 : AWS Lambda (ap-northeast-2, seoul) 배포 라이브러리 : Mangum (zappa는 FastAPI 지원안함) 게이트웨이 : AWS API Gateway 데이터베이스 : AWS RDS PostgreSQL(엔진) + sqlalchemy(orm) &raquo;&gt; mysql + sqlalchemy(orm) 개발 초기 내부망이 아닌 외부망에서 진행 계획이었던 프로젝트라, postgre를 사용하였는데, 개발 도중 내부망으로 들여와야 했다. 1. 환경설정 FastAPI 설치 1 2 $ pip install fastapi $ pip install uvicorn main.py 작성 mangum 이나, uvicorn 등 기타 필요한 사항들을 상단에 import 시켜줘야 한다. 1 2 3 4 5 6 7 8 9 10 app = FastAPI( title=&#34;&lt;server name&gt;&#34;, description=&#34;&lt;server description&gt;&#34;, default_response_class=JSONResponse, ) # 라우터 정의 # 라우터 디렉토리를 두 개로 나누어줬다. app.include_router(index.router, prefix=&#34;/v1&#34;) app.include_router(evntcode.router, prefix=&#34;/v1&#34;) 2. API 코드 작성 ]]></description>
-</item>
-<item>
-    <title>블로그를 만들어보자</title>
-    <link>https://ahndogeon.github.io/make_blog/</link>
-    <pubDate>Sun, 31 Jul 2022 13:57:34 &#43;0900</pubDate>
-    <author>AhnDogeon</author>
-    <guid>https://ahndogeon.github.io/make_blog/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/make_blog.jpeg" referrerpolicy="no-referrer">
-            </div><blockquote>
-<p><code>Hugo</code>를 학습하고 나만의 블로그를 만들어 배포해보자.</p>
-</blockquote>]]></description>
-</item>
-<item>
-    <title>Initial Post</title>
-    <link>https://ahndogeon.github.io/initial_post/</link>
-    <pubDate>Thu, 28 Jul 2022 23:00:00 &#43;0900</pubDate>
-    <author>AhnDogeon</author>
-    <guid>https://ahndogeon.github.io/initial_post/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/first_post.png" referrerpolicy="no-referrer">
-            </div><blockquote>
-<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>
-</blockquote>]]></description>
 </item>
 </channel>
 </rss>
