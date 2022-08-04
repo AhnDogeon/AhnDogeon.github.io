@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Make_api - DG&#39;s Blog</title><meta name="Description" content="This article explain how to make api server with FastAPI"><meta property="og:title" content="Make_api" />
+        <title>API 서버 구축기 1탄 - DG&#39;s Blog</title><meta name="Description" content="This article explain how to make api server with FastAPI"><meta property="og:title" content="API 서버 구축기 1탄" />
 <meta property="og:description" content="This article explain how to make api server with FastAPI" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ahndogeon.github.io/make_api/" /><meta property="og:image" content="https://ahndogeon.github.io/images/profile3.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-04T19:15:43+09:00" />
-<meta property="article:modified_time" content="2022-08-04T19:15:52+09:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-08-04T19:20:34+09:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ahndogeon.github.io/images/profile3.png"/>
 
-<meta name="twitter:title" content="Make_api"/>
+<meta name="twitter:title" content="API 서버 구축기 1탄"/>
 <meta name="twitter:description" content="This article explain how to make api server with FastAPI"/>
 <meta name="application-name" content="kid">
 <meta name="apple-mobile-web-app-title" content="kid"><meta name="theme-color" content="#DB6B97"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ahndogeon.github.io/make_api/" /><link rel="prev" href="https://ahndogeon.github.io/make_blog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -23,7 +23,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Make_api",
+        "headline": "API 서버 구축기 1탄",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -33,8 +33,8 @@
                             "url": "https:\/\/ahndogeon.github.io\/images\/profile.png",
                             "width":  460 ,
                             "height":  460 
-                        }],"genre": "posts","keywords": "API, Server","wordcount":  249 ,
-        "url": "https:\/\/ahndogeon.github.io\/make_api\/","datePublished": "2022-08-04T19:15:43+09:00","dateModified": "2022-08-04T19:15:52+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "API, Server","wordcount":  217 ,
+        "url": "https:\/\/ahndogeon.github.io\/make_api\/","datePublished": "2022-08-04T19:15:43+09:00","dateModified": "2022-08-04T19:20:34+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Kid","logo": "https:\/\/ahndogeon.github.io\/images\/profile3.png"},"author": {
                 "@type": "Person",
@@ -105,9 +105,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Make_api</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">API 서버 구축기 1탄</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-04">2022-08-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;249 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-04">2022-08-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;217 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -140,17 +140,6 @@
             </div><div class="content" id="content"><blockquote>
 <p>FastAPI로 api 서버를 개발하고, 배포해보자</p>
 </blockquote>
-<p>title: &ldquo;Initial Post&rdquo;
-date: 2022-07-28T23:00:00+09:00
-lastmod: 2022-07-31T12:13:40+09:00
-author: &ldquo;AhnDogeon&rdquo;
-authorLink: &ldquo;<a href="https://github.com/ahndogeon%22" target="_blank" rel="noopener noreffer ">https://github.com/ahndogeon"</a>
-description: &ldquo;This article shows the basic Markdown syntax and format.&rdquo;
-draft: false
-tags: [&ldquo;Markdown&rdquo;, &ldquo;HTML&rdquo;]
-categories: [&ldquo;Markdown&rdquo;]
-lightgallery: true
-featuredImage: &ldquo;/images/first_post.png&rdquo;</p>
 <p>2021년 상반기에 만들었던 로블록스 게임과 연계해서 이벤트를 해보자는 협업 요청이 들어왔다. 외부앱에서 들어오는 요청에 대한 응답을 해주는 서버 개발이 필요했고, 오픈 일정이 매우 촉박했기에 <code>FastAPI</code>로 빠르게 개발하는 것이 좋다는 판단을 했다.</p>
 <p>이번 장에서는 <code>FastAPI</code> 개발 내용을 정리하고, DB연동과 서버 배포에 대한 내용을 차례로 정리할 계획이다.</p>
 <p>당연하게도 사내 프로젝트인만큼 블로그에서는 상세한 구축법, 코드, 아키텍처를 제외한, 트러블슈팅 내용, 개발 고민, 과정, 간단 코드 위주로 포스팅을 하겠다.</p>
@@ -227,8 +216,8 @@ featuredImage: &ldquo;/images/first_post.png&rdquo;</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-08-04&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/11dcae425b67ec42a96924dc07355efd684656c8" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) 11dcae425b67ec42a96924dc07355efd684656c8: rebuilding site 2022년 8월  4일 목요일 19시 15분 52초 KST">
-                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>11dcae4</a></span>
+                <span>Updated on 2022-08-04&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/d6df9e3e6341102a9eb6efeef44ee0225af7089c" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) d6df9e3e6341102a9eb6efeef44ee0225af7089c: rebuilding site 2022년 8월  4일 목요일 19시 20분 34초 KST">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>d6df9e3</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>

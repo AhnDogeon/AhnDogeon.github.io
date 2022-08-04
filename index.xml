@@ -7,7 +7,7 @@
             <webMaster>ahn_qlti@naver.com (Dogeon Ahn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Aug 2022 19:15:43 &#43;0900</lastBuildDate>
             <atom:link href="https://ahndogeon.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Make_api</title>
+    <title>API 서버 구축기 1탄</title>
     <link>https://ahndogeon.github.io/make_api/</link>
     <pubDate>Thu, 04 Aug 2022 19:15:43 &#43;0900</pubDate>
     <author>AhnDogeon</author>
@@ -15,7 +15,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/fast_api_image.png" referrerpolicy="no-referrer">
             </div> FastAPI로 api 서버를 개발하고, 배포해보자
-title: &ldquo;Initial Post&rdquo; date: 2022-07-28T23:00:00+09:00 lastmod: 2022-07-31T12:13:40+09:00 author: &ldquo;AhnDogeon&rdquo; authorLink: &ldquo;https://github.com/ahndogeon" description: &ldquo;This article shows the basic Markdown syntax and format.&rdquo; draft: false tags: [&ldquo;Markdown&rdquo;, &ldquo;HTML&rdquo;] categories: [&ldquo;Markdown&rdquo;] lightgallery: true featuredImage: &ldquo;/images/first_post.png&rdquo;
 2021년 상반기에 만들었던 로블록스 게임과 연계해서 이벤트를 해보자는 협업 요청이 들어왔다. 외부앱에서 들어오는 요청에 대한 응답을 해주는 서버 개발이 필요했고, 오픈 일정이 매우 촉박했기에 FastAPI로 빠르게 개발하는 것이 좋다는 판단을 했다.
 이번 장에서는 FastAPI 개발 내용을 정리하고, DB연동과 서버 배포에 대한 내용을 차례로 정리할 계획이다.
 당연하게도 사내 프로젝트인만큼 블로그에서는 상세한 구축법, 코드, 아키텍처를 제외한, 트러블슈팅 내용, 개발 고민, 과정, 간단 코드 위주로 포스팅을 하겠다.

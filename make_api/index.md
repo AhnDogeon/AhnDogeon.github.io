@@ -1,19 +1,9 @@
-# Make_api
+# API 서버 구축기 1탄
 
 
 > FastAPI로 api 서버를 개발하고, 배포해보자
 
-title: "Initial Post"
-date: 2022-07-28T23:00:00+09:00
-lastmod: 2022-07-31T12:13:40+09:00
-author: "AhnDogeon"
-authorLink: "https://github.com/ahndogeon"
-description: "This article shows the basic Markdown syntax and format."
-draft: false
-tags: ["Markdown", "HTML"]
-categories: ["Markdown"]
-lightgallery: true
-featuredImage: "/images/first_post.png"
+
 
 2021년 상반기에 만들었던 로블록스 게임과 연계해서 이벤트를 해보자는 협업 요청이 들어왔다. 외부앱에서 들어오는 요청에 대한 응답을 해주는 서버 개발이 필요했고, 오픈 일정이 매우 촉박했기에 `FastAPI`로 빠르게 개발하는 것이 좋다는 판단을 했다.
 
