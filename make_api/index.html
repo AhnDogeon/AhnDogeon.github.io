@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ahndogeon.github.io/make_api/" /><meta property="og:image" content="https://ahndogeon.github.io/images/profile3.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-04T19:15:43+09:00" />
-<meta property="article:modified_time" content="2022-08-04T19:20:34+09:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-08-04T19:22:07+09:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ahndogeon.github.io/images/profile3.png"/>
@@ -33,8 +33,8 @@
                             "url": "https:\/\/ahndogeon.github.io\/images\/profile.png",
                             "width":  460 ,
                             "height":  460 
-                        }],"genre": "posts","keywords": "API, Server","wordcount":  217 ,
-        "url": "https:\/\/ahndogeon.github.io\/make_api\/","datePublished": "2022-08-04T19:15:43+09:00","dateModified": "2022-08-04T19:20:34+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "API, Server","wordcount":  558 ,
+        "url": "https:\/\/ahndogeon.github.io\/make_api\/","datePublished": "2022-08-04T19:15:43+09:00","dateModified": "2022-08-04T19:22:07+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Kid","logo": "https:\/\/ahndogeon.github.io\/images\/profile3.png"},"author": {
                 "@type": "Person",
@@ -107,8 +107,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">API 서버 구축기 1탄</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-04">2022-08-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;217 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-04">2022-08-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;558 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -135,6 +135,7 @@
       </ul>
     </li>
     <li><a href="#2-api-코드-작성">2. API 코드 작성</a></li>
+    <li><a href="#3-정리하며">3. 정리하며</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -212,12 +213,115 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="2-api-코드-작성">2. API 코드 작성</h2>
+<p>라우터를 설정해주면, 남은건 API를 만들 시간이다. 서버의 주요기능을 작성하는만큼 미리 명세를 잘 짜두고, 기본적인 것이지만 어떤 인자를 써야할지, GET 요청인지, POST 요청인지 등등을 정리해두고 개발하길 추천한다.</p>
+<p>가장 먼저, 현재 시간 리턴하는 서버 상태 체크용 GET요청 함수를 만들어줬다.</p>
+<p><strong>routes/index.py</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">include_in_schema</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    상태 체크용 API
+</span></span></span><span class="line"><span class="cl"><span class="s2">    :return:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">current_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;server time: </span><span class="si">{</span><span class="n">current_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y.%m.</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이후는 명세에 필요한 POST 요청을 하나하나 만들어줘야 하는데, POST인만큼 DB모델링과 schema를 만들어줘야 했다. 해당 경로로 가자</p>
+<p><strong>app/db/models.py</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="o">&lt;</span><span class="n">사용할</span> <span class="n">데이터</span> <span class="n">타입</span><span class="o">&gt;</span> 
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">relationship</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">.conn</span> <span class="kn">import</span> <span class="n">Base</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ForExample</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    포스팅을 위한 예시 모델링 클래스다.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;&lt;your table name&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># # =========================================================================================</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># # 1. 사용할 칼럼들을 모델링 </span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># # =========================================================================================</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evntcode</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>            
+</span></span><span class="line"><span class="cl">    <span class="n">cost</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>              
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>간단하게 모델링 예시를 들어봤다. 클래스 안에 칼럼들을 쭉 써주면 되는데, 각 칼럼들에 맞게 타입을 지정해주고, 필요 인자들을 넣어주면 된다. 추후에 적을 것이지만, 내부망으로 들여오는 작업을 진행하면서 이 DB들을 내부망에 맞게 싹 바꿔줘야 했는데, 굉장히 난해한 작업이었다. <del>칼럼명부터 한글이다.</del> 다시 API 코드 작성으로 돌아가자. 아래는 간략한 POST 코드다.</p>
+<p><strong>routes/evntcode.py</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@router</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/&lt;경로 이름짓기가 은근 힘들다.&gt;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="o">&lt;</span><span class="n">함수이름도</span> <span class="n">마찬가지</span><span class="o">&gt;</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">body</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">bodyname</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">credentials</span><span class="p">:</span> <span class="n">HTTPAuthorizationCredentials</span> <span class="o">=</span> <span class="n">Security</span><span class="p">(</span><span class="n">security</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">db</span><span class="p">:</span> <span class="n">Session</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    POST 요청 예시 </span><span class="se">\n</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Authrization Check (Bearer Token)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># token 인증 외에도 TLS, 보안솔루션 설치 등의 절차가 꼭 필요하다</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># DB update</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">crud</span><span class="o">.</span><span class="n">DB_UpdateFunc</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">body</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="3-정리하며">3. 정리하며</h2>
+<p>이런 식으로 명세에 맞게 설계한 API들을 쭉 개발해주면 된다. 개발 과정에서 명세 또한 계속해서 바뀌고, 그 과정에서 코드를 수정하며, 조금 더 효율적으로 바꿀 수 있지 않을까? 하며 명세를 자체적으로 수정하여 컨펌 받기도 했다. 포스팅 마지막 탄에 다시 이야기하겠지만, 취업을 준비할 때와 처음 싸피 과정을 진행할 때는 시중에 나와있는 오픈API 만 사용하였는데, 직접 API 서버를 만들어 배포해보니, 내가 썼던 API들에 녹여있는 개발자들의 피땀눈물이 느껴졌다. 이 자리를 빌어 다시 한 번 감사의 인사를 올려야겠다.</p>
+<p>다음 포스팅에서는 배포를 위한 AWS 세팅에 관해 포스팅하겠다.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-08-04&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/d6df9e3e6341102a9eb6efeef44ee0225af7089c" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) d6df9e3e6341102a9eb6efeef44ee0225af7089c: rebuilding site 2022년 8월  4일 목요일 19시 20분 34초 KST">
-                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>d6df9e3</a></span>
+                <span>Updated on 2022-08-04&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/f7093054eb5b558706a669a4689282c832730cc0" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) f7093054eb5b558706a669a4689282c832730cc0: rebuilding site 2022년 8월  4일 목요일 19시 22분 07초 KST">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>f709305</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
