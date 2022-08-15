@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>API 서버 구축기 1탄 - DG&#39;s Blog</title><meta name="Description" content="This article explain how to make api server with FastAPI"><meta property="og:title" content="API 서버 구축기 1탄" />
+        <title>API 서버 구축기 2탄 - DG&#39;s Blog</title><meta name="Description" content="This article explain how to make api server with FastAPI"><meta property="og:title" content="API 서버 구축기 2탄" />
 <meta property="og:description" content="This article explain how to make api server with FastAPI" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ahndogeon.github.io/make_api2/" /><meta property="og:image" content="https://ahndogeon.github.io/images/profile3.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-08-04T19:15:43+09:00" />
-<meta property="article:modified_time" content="2022-08-04T19:15:43+09:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta property="article:modified_time" content="2022-08-15T10:39:42+09:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ahndogeon.github.io/images/profile3.png"/>
 
-<meta name="twitter:title" content="API 서버 구축기 1탄"/>
+<meta name="twitter:title" content="API 서버 구축기 2탄"/>
 <meta name="twitter:description" content="This article explain how to make api server with FastAPI"/>
 <meta name="application-name" content="kid">
-<meta name="apple-mobile-web-app-title" content="kid"><meta name="theme-color" content="#DB6B97"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ahndogeon.github.io/make_api2/" /><link rel="prev" href="https://ahndogeon.github.io/make_blog/" /><link rel="next" href="https://ahndogeon.github.io/make_api/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="kid"><meta name="theme-color" content="#DB6B97"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ahndogeon.github.io/make_api2/" /><link rel="next" href="https://ahndogeon.github.io/initial_post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "API 서버 구축기 1탄",
+        "headline": "API 서버 구축기 2탄",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -33,8 +33,8 @@
                             "url": "https:\/\/ahndogeon.github.io\/images\/profile.png",
                             "width":  460 ,
                             "height":  460 
-                        }],"genre": "posts","keywords": "API, Server","wordcount":  558 ,
-        "url": "https:\/\/ahndogeon.github.io\/make_api2\/","datePublished": "2022-08-04T19:15:43+09:00","dateModified": "2022-08-04T19:15:43+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "API, Server","wordcount":  155 ,
+        "url": "https:\/\/ahndogeon.github.io\/make_api2\/","dateModified": "2022-08-15T10:39:42+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Kid","logo": "https:\/\/ahndogeon.github.io\/images\/profile3.png"},"author": {
                 "@type": "Person",
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">API 서버 구축기 1탄</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">API 서버 구축기 2탄</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-04">2022-08-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;558 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;155 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -126,22 +126,10 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#서버-스펙-명세">서버 스펙 명세</a></li>
-    <li><a href="#1-환경설정">1. 환경설정</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#fastapi-설치">FastAPI 설치</a></li>
-            <li><a href="#mainpy-작성">main.py 작성</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#2-api-코드-작성">2. API 코드 작성</a></li>
-    <li><a href="#3-정리하며">3. 정리하며</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>FastAPI로 api 서버를 개발하고, 배포해보자</p>
+<p>FastAPI로 api 서버를 개발하고, 배포해보자 2탄</p>
 </blockquote>
 <p>2021년 상반기에 만들었던 로블록스 게임과 연계해서 이벤트를 해보자는 협업 요청이 들어왔다. 외부앱에서 들어오는 요청에 대한 응답을 해주는 서버 개발이 필요했고, 오픈 일정이 매우 촉박했기에 <code>FastAPI</code>로 빠르게 개발하는 것이 좋다는 판단을 했다.</p>
 <p>이번 장에서는 <code>FastAPI</code> 개발 내용을 정리하고, DB연동과 서버 배포에 대한 내용을 차례로 정리할 계획이다.</p>
@@ -163,166 +151,12 @@
 </ul>
 </li>
 </ul>
-<hr>
-<h2 id="1-환경설정">1. 환경설정</h2>
-<ul>
-<li>
-<h4 id="fastapi-설치">FastAPI 설치</h4>
-</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ pip install fastapi
-</span></span><span class="line"><span class="cl"> $ pip install uvicorn
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>
-<h4 id="mainpy-작성">main.py 작성</h4>
-<ul>
-<li><code>mangum</code> 이나, <code>uvicorn</code>   등 기타 필요한 사항들을 상단에 import 시켜줘야 한다.</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">title</span><span class="o">=</span><span class="s2">&#34;&lt;server name&gt;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;&lt;server description&gt;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">default_response_class</span><span class="o">=</span><span class="n">JSONResponse</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 라우터 정의</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 라우터 디렉토리를 두 개로 나누어줬다.</span>
-</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">include_router</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">router</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&#34;/v1&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">include_router</span><span class="p">(</span><span class="n">evntcode</span><span class="o">.</span><span class="n">router</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&#34;/v1&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="2-api-코드-작성">2. API 코드 작성</h2>
-<p>라우터를 설정해주면, 남은건 API를 만들 시간이다. 서버의 주요기능을 작성하는만큼 미리 명세를 잘 짜두고, 기본적인 것이지만 어떤 인자를 써야할지, GET 요청인지, POST 요청인지 등등을 정리해두고 개발하길 추천한다.</p>
-<p>가장 먼저, 현재 시간 리턴하는 서버 상태 체크용 GET요청 함수를 만들어줬다.</p>
-<p><strong>routes/index.py</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@router</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">include_in_schema</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    상태 체크용 API
-</span></span></span><span class="line"><span class="cl"><span class="s2">    :return:
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="n">current_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;server time: </span><span class="si">{</span><span class="n">current_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y.%m.</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>이후는 명세에 필요한 POST 요청을 하나하나 만들어줘야 하는데, POST인만큼 DB모델링과 schema를 만들어줘야 했다. 해당 경로로 가자</p>
-<p><strong>app/db/models.py</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="o">&lt;</span><span class="n">사용할</span> <span class="n">데이터</span> <span class="n">타입</span><span class="o">&gt;</span> 
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">relationship</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">.conn</span> <span class="kn">import</span> <span class="n">Base</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ForExample</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    포스팅을 위한 예시 모델링 클래스다.
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;&lt;your table name&gt;&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># # =========================================================================================</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># # 1. 사용할 칼럼들을 모델링 </span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># # =========================================================================================</span>
-</span></span><span class="line"><span class="cl">    <span class="n">evntcode</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Text</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>            
-</span></span><span class="line"><span class="cl">    <span class="n">cost</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>              
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>간단하게 모델링 예시를 들어봤다. 클래스 안에 칼럼들을 쭉 써주면 되는데, 각 칼럼들에 맞게 타입을 지정해주고, 필요 인자들을 넣어주면 된다. 추후에 적을 것이지만, 내부망으로 들여오는 작업을 진행하면서 이 DB들을 내부망에 맞게 싹 바꿔줘야 했는데, 굉장히 난해한 작업이었다. <del>칼럼명부터 한글이다.</del> 다시 API 코드 작성으로 돌아가자. 아래는 간략한 POST 코드다.</p>
-<p><strong>routes/evntcode.py</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@router</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/&lt;경로 이름짓기가 은근 힘들다.&gt;&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="o">&lt;</span><span class="n">함수이름도</span> <span class="n">마찬가지</span><span class="o">&gt;</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">body</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">bodyname</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                  <span class="n">credentials</span><span class="p">:</span> <span class="n">HTTPAuthorizationCredentials</span> <span class="o">=</span> <span class="n">Security</span><span class="p">(</span><span class="n">security</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">                  <span class="n">db</span><span class="p">:</span> <span class="n">Session</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    POST 요청 예시 </span><span class="se">\n</span><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Authrization Check (Bearer Token)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># token 인증 외에도 TLS, 보안솔루션 설치 등의 절차가 꼭 필요하다</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># DB update</span>
-</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">crud</span><span class="o">.</span><span class="n">DB_UpdateFunc</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">body</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="3-정리하며">3. 정리하며</h2>
-<p>이런 식으로 명세에 맞게 설계한 API들을 쭉 개발해주면 된다. 개발 과정에서 명세 또한 계속해서 바뀌고, 그 과정에서 코드를 수정하며, 조금 더 효율적으로 바꿀 수 있지 않을까? 하며 명세를 자체적으로 수정하여 컨펌 받기도 했다. 포스팅 마지막 탄에 다시 이야기하겠지만, 취업을 준비할 때와 처음 싸피 과정을 진행할 때는 시중에 나와있는 오픈API 만 사용하였는데, 직접 API 서버를 만들어 배포해보니, 내가 썼던 API들에 녹여있는 개발자들의 피땀눈물이 느껴졌다. 이 자리를 빌어 다시 한 번 감사의 인사를 올려야겠다.</p>
-<p>다음 포스팅에서는 배포를 위한 AWS 세팅에 관해 포스팅하겠다.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-08-04</span>
+                <span>Updated on 2022-08-15&nbsp;<a class="git-hash" href="https://github.com/ahndogeon/blog/commit/f8fb34a98fe605b66b3c330d2641d8c495e17459" target="_blank" title="commit by ahndogeon(qltiqlti@gmail.com) f8fb34a98fe605b66b3c330d2641d8c495e17459: rebuilding site Mon Aug 15 10:39:42 KST 2022">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>f8fb34a</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
@@ -341,8 +175,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/make_blog/" class="prev" rel="prev" title="블로그를 만들어보자"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>블로그를 만들어보자</a>
-            <a href="/make_api/" class="next" rel="next" title="API 서버 구축기 1탄">API 서버 구축기 1탄<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav">
+            <a href="/initial_post/" class="next" rel="next" title="Initial Post">Initial Post<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="utterances" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
