@@ -100,6 +100,24 @@
         alt="/images/profile.png"
         title="/images/profile.png" width="460" height="460" /></a></div><h1 class="home-title">Dogeon</h1><div class="home-subtitle"><div id="id-3" class="typeit"></div></div><div class="links"><a href="https://github.com/ahndogeon" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:ahndogeon@naver.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/make_api2/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/fast_api_image.png"
+        data-srcset="/images/fast_api_image.png, /images/fast_api_image.png 1.5x, /images/fast_api_image.png 2x"
+        data-sizes="auto"
+        alt="/images/fast_api_image.png"
+        title="This article explain how to make api server with FastAPI" width="1023" height="369" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/make_api2/">API 서버 구축기 2탄</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-08-15">2022-08-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div><div class="content"> FastAPI로 api 서버를 개발하고, 배포해보자 2탄
+2021년 상반기에 만들었던 로블록스 게임과 연계해서 이벤트를 해보자는 협업 요청이 들어왔다. 외부앱에서 들어오는 요청에 대한 응답을 해주는 서버 개발이 필요했고, 오픈 일정이 매우 촉박했기에 FastAPI로 빠르게 개발하는 것이 좋다는 판단을 했다.
+이번 장에서는 FastAPI 개발 내용을 정리하고, DB연동과 서버 배포에 대한 내용을 차례로 정리할 계획이다.
+당연하게도 사내 프로젝트인만큼 블로그에서는 상세한 구축법, 코드, 아키텍처를 제외한, 트러블슈팅 내용, 개발 고민, 과정, 간단 코드 위주로 포스팅을 하겠다.
+서버 스펙 명세 버전관리시스템 : Git - GitLab API 설계 원칙 : REST API 직렬화 포맷 : JSON 사용자 인증 : Authorization 헤더 인증 스키마 : Bearer + token (Lambda Authorizer 사용) 언어 + 웹 프레임워크 : Python + FastAPI 컴퓨팅 서비스 : AWS Lambda (ap-northeast-2, seoul) 배포 라이브러리 : Mangum (zappa는 FastAPI 지원안함) 게이트웨이 : AWS API Gateway 데이터베이스 : AWS RDS PostgreSQL(엔진) + sqlalchemy(orm) &raquo;&gt; mysql + sqlalchemy(orm) 개발 초기 내부망이 아닌 외부망에서 진행 계획이었던 프로젝트라, postgre를 사용하였는데, 개발 도중 내부망으로 들여와야 했다. </div><div class="post-footer">
+        <a href="/make_api2/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/api/">API</a>,&nbsp;<a href="/tags/server/">Server</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/make_api/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -156,24 +174,6 @@ routes/evntcode.py
 </blockquote></div><div class="post-footer">
         <a href="/initial_post/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/markdown/">Markdown</a>,&nbsp;<a href="/tags/html/">HTML</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/make_api2/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/images/fast_api_image.png"
-        data-srcset="/images/fast_api_image.png, /images/fast_api_image.png 1.5x, /images/fast_api_image.png 2x"
-        data-sizes="auto"
-        alt="/images/fast_api_image.png"
-        title="This article explain how to make api server with FastAPI" width="1023" height="369" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/make_api2/">API 서버 구축기 2탄</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div><div class="content"> FastAPI로 api 서버를 개발하고, 배포해보자 2탄
-2021년 상반기에 만들었던 로블록스 게임과 연계해서 이벤트를 해보자는 협업 요청이 들어왔다. 외부앱에서 들어오는 요청에 대한 응답을 해주는 서버 개발이 필요했고, 오픈 일정이 매우 촉박했기에 FastAPI로 빠르게 개발하는 것이 좋다는 판단을 했다.
-이번 장에서는 FastAPI 개발 내용을 정리하고, DB연동과 서버 배포에 대한 내용을 차례로 정리할 계획이다.
-당연하게도 사내 프로젝트인만큼 블로그에서는 상세한 구축법, 코드, 아키텍처를 제외한, 트러블슈팅 내용, 개발 고민, 과정, 간단 코드 위주로 포스팅을 하겠다.
-서버 스펙 명세 버전관리시스템 : Git - GitLab API 설계 원칙 : REST API 직렬화 포맷 : JSON 사용자 인증 : Authorization 헤더 인증 스키마 : Bearer + token (Lambda Authorizer 사용) 언어 + 웹 프레임워크 : Python + FastAPI 컴퓨팅 서비스 : AWS Lambda (ap-northeast-2, seoul) 배포 라이브러리 : Mangum (zappa는 FastAPI 지원안함) 게이트웨이 : AWS API Gateway 데이터베이스 : AWS RDS PostgreSQL(엔진) + sqlalchemy(orm) &raquo;&gt; mysql + sqlalchemy(orm) 개발 초기 내부망이 아닌 외부망에서 진행 계획이었던 프로젝트라, postgre를 사용하였는데, 개발 도중 내부망으로 들여와야 했다. </div><div class="post-footer">
-        <a href="/make_api2/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/api/">API</a>,&nbsp;<a href="/tags/server/">Server</a></div></div>
 </article></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
