@@ -33,7 +33,7 @@
                             "url": "https:\/\/ahndogeon.github.io\/images\/profile.png",
                             "width":  460 ,
                             "height":  460 
-                        }],"genre": "posts","keywords": "API, Server","wordcount":  67 ,
+                        }],"genre": "posts","keywords": "API, Server","wordcount":  75 ,
         "url": "https:\/\/ahndogeon.github.io\/make_api2\/","datePublished": "2022-08-15T10:40:14+09:00","dateModified": "2022-08-18T00:09:35+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Kid","logo": "https:\/\/ahndogeon.github.io\/images\/profile3.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">API 서버 구축기 2탄</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ahndogeon" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>AhnDogeon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-15">2022-08-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;67 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-15">2022-08-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;75 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -128,7 +128,8 @@
 <p>FastAPI로 api 서버를 개발하고, 배포해보자 2탄</p>
 </blockquote>
 <p>저번 포스팅에서 기본적인 요청들 처리하는 방법과 세팅에 대해서 적었다. 최대한 REST하게 짜고 싶었는데 개발을 진행하면서 많이 희석된 것 같다. 반성해야겠다. 이번 포스팅에서는 배포에 대해 적어보겠다. 사내 개발이어서 내부망과 외부망을 연동하다보니 시행착오가 굉장히 많았고, 꼭 시간내서 정리해야겠다고 생각했다.</p>
-<p>서버는 AWS의 람다를 사용하고, 초기 DB는 postgre 를 사용해주어 코드 자체에서 엔진으로 연결해주었다. 개발을 진행하면서 사내 내부망으로 들여와야 한다는 요건이 추가되어, 힘든 시간이 시작되었다.</p></div><div class="post-footer" id="post-footer">
+<p>서버는 AWS의 람다를 사용하고, 초기 DB는 postgre 를 사용해주어 코드 자체에서 엔진으로 연결해주었다. 개발을 진행하면서 사내 내부망으로 들여와야 한다는 요건이 추가되어, 힘든 시간이 시작되었다.</p>
+<p>외부망 개발 -&gt; 내부망 이관 -&gt; 내부망 배포</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
